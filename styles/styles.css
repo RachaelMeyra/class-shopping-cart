@@ -1,0 +1,508 @@
+/* Variables 
+
+HEX:
+#84736b --> dark brown
+#4a4a4a --> dark grey
+
+RGBA:
+ rgb(189,175,168); --> light brown
+
+*/
+body {
+    font-size: 10px;
+    background-color: rgb(189,175,168);
+    color: white;
+    line-height: normal;
+    letter-spacing: inherit;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+
+img{
+    width: 100%;
+}
+
+ h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+ }
+
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 0px;
+    color: #fff;
+    line-height: 26px;
+}
+
+p.dark {
+    color: white;
+}
+
+p.light {
+    color: #84736b;
+}
+/* Normal Containers */
+
+/* Hepers */
+
+.center {
+    text-align: center;
+}
+
+.content {
+    padding: 30px;
+    width: 100%;
+    background: white;
+}
+.content.transparent {
+    background: none;
+}
+
+.content.about p, h1{
+    color: white;
+}
+
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1050;
+    background-color: rgb(189,175,168);
+    /* -webkit-box-shadow: 2px 2px 5px 3px rgba(0,0,0,0.45);
+    -moz-box-shadow: 2px 2px 5px 3px rgba(0,0,0,0.45);
+    box-shadow: 2px 2px 5px 3px rgba(0,0,0,0.45); */
+}
+
+/* .container{         
+   float: right;
+   width: 100px;
+   height: 200px;
+   display: block;
+} */
+
+/* .container {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 3px;
+    background-color: rgb(189,175,168);
+    padding: 20px;
+} */
+
+
+.logo {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    padding: 8px;
+}
+
+.menu {
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: rgb(189,175,168);
+    overflow-y: hidden;
+    transition: 0.5s;
+    margin-top: 0px;
+}
+
+.overlay.active {
+    height: 100px;
+}
+
+@keyframes overlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes overlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.overlay-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+    z-index: 2;
+    margin-top: 30px;
+
+    animation-name: overlay;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+}
+
+.overlay-content ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+li.overlay-list {
+    display: inline-block;
+}
+
+a.overlay-item {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.overlay-content button:hover {
+    text-decoration: none;
+}
+.overlay button {
+    z-index: 9999;
+    position: relative;
+    left: 530px;
+    top: 30px;
+    float: left;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+/* .overlay a:hover, .overlay a:focus {
+    color: #818181;
+} */
+
+.overlay .close {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.background{
+    margin: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(189,175,168);
+    background-size: cover;
+}
+
+img.full-width {
+    background-repeat: no-repeat; 
+    background-size: 80vw;
+    background-position: center;
+    background-attachment:  fixed;
+}
+
+.image-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+img.min-width{
+    width: 600px;
+    height: 760px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding:25px;
+}
+
+/* Pseudo Selectors */
+img.min-width:nth-child(3) {
+    flex:1; width:80vw; margin-right: 20px;margin-left: 20px;
+}
+
+/* Styles for Contact Page */
+
+label { 
+    font-family: Helvetica;
+    font-size: 14px;
+    color: #4a4a4a;;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: solid rgb(189,175,168);
+    border-radius: 2px;
+    resize: inherit;
+    color: black;
+}
+
+input[type=text], textarea:-moz-placeholder {
+    color: #ccc;
+}
+
+input[type=submit] {
+    background-color: rgb(189,175,168);
+    color: #4a4a4a;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    
+}
+
+input[type=submit]:hover {
+    background-color: #84736b;
+    color: white;
+    font-size: 14px;
+
+}
+
+.page-header__title {
+    padding-left: 500px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* animations and keyframes */
+
+@keyframes begin {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes begin {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation-name: begin;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+    margin-top: 100px;
+}
+
+/* Styles for About */
+
+.background.about {
+    background-image: url("../images/about.png");
+    background-repeat: no-repeat;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+      
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+/* Pseudo Selector for :before */
+
+.background.about:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background.index {
+
+}
+.background.contact {
+
+}
+
+ul.form-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.form-list li {
+    display: block;
+    padding: 10px;
+}
+
+
+.meyra-submit {
+    color: #84736b;
+}
+.meyra-submit:hover {
+    color: white;
+}
+
+.categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* space-between? */
+    flex-direction: row;
+}
+
+.categories .products {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: scale(1);
+    position: relative;
+}
+
+.categories .products a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center .products:hover {
+    transform: scale(1.2);
+}
+
+.categories .products img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 700px;
+}
+
+.categories .products h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    position: absolute;
+}
+
+.product-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.product-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    height: 250px;
+
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background: grey;
+    width: 250px;
+    margin-left: 10px;
+
+}
+
+.product-item:first-child {
+    margin-left: 0;
+}
+
+.product-item .product-details {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    bottom: -150px;
+    transition: all .3s ease 0s;
+}
+
+.product-details h4 {
+    text-align: left;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-details span {
+    text-align: left;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-item:hover .product-details {
+    bottom: 0;
+}
+
+.product-details:hover .product-overlay {
+    display: block;
+}
+
+.product-overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    background: rgba(0,0,0, .3);
+    display: none;
+}
